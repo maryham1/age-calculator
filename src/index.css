@@ -74,12 +74,15 @@ form div {
 .text-error-color {
   color: red;
   font-style: italic;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
   /* width: 100px; */
 }
 
 @media (max-width: 476px) {
+  .form-input-values {
+    gap: 10px;
+  }
   body {
     padding-top: 30px;
     padding-left: 30px;
@@ -87,7 +90,7 @@ form div {
     /* align-items: center; */
   }
   .form-input-no-error {
-    width: 55px;
+    width: 60px;
   }
   .button-div {
     position: relative;
@@ -108,6 +111,6 @@ form div {
     font-family: "Times New Roman", Times, serif;
   }
   .error-input-color {
-    width: 55px;
+    width: 60px;
   }
 }

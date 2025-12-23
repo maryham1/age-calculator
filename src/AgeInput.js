@@ -46,6 +46,7 @@ export default function AgeInput({ onCalcAge }) {
         <div>
           <label
             for="day"
+            style={{ fontSize: "20px" }}
             className={validDay || error ? "text-error-color" : ""}
           >
             Day
@@ -59,7 +60,10 @@ export default function AgeInput({ onCalcAge }) {
             value={day}
             onChange={(e) => setDay(Number(e.target.value))}
           />
-          <p className={validDay || error ? "text-error-color" : ""}>
+          <p
+            style={{ marginTop: "2px" }}
+            className={validDay || error ? "text-error-color" : ""}
+          >
             {error ? `${error}` : validDay ? "Input valid day" : null}
           </p>
         </div>
@@ -67,6 +71,7 @@ export default function AgeInput({ onCalcAge }) {
         <div>
           <label
             for="month"
+            style={{ fontSize: "20px" }}
             className={validMonth || error ? "text-error-color" : ""}
           >
             Month
@@ -80,7 +85,10 @@ export default function AgeInput({ onCalcAge }) {
             value={month}
             onChange={(e) => setMonth(Number(e.target.value))}
           />
-          <p className={validMonth || error ? "text-error-color" : ""}>
+          <p
+            style={{ marginTop: "2px" }}
+            className={validMonth || error ? "text-error-color" : ""}
+          >
             {error ? `${error}` : validMonth ? "enter valid month" : null}
           </p>
         </div>
@@ -88,6 +96,7 @@ export default function AgeInput({ onCalcAge }) {
         <div>
           <label
             for="year"
+            style={{ fontSize: "20px" }}
             className={validYear || error ? "text-error-color" : ""}
           >
             Year
@@ -101,7 +110,10 @@ export default function AgeInput({ onCalcAge }) {
             value={year}
             onChange={(e) => setYear(Number(e.target.value))}
           />
-          <p className={validYear || error ? "text-error-color" : ""}>
+          <p
+            style={{ marginTop: "2px" }}
+            className={validYear || error ? "text-error-color" : ""}
+          >
             {error ? `${error}` : validYear ? "enter valid date" : null}
           </p>
         </div>
