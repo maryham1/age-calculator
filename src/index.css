@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  /* align-items: center; */
+}
+label {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.calculator-body {
+  background-color: white;
+  box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 30px;
+  border-bottom-right-radius: 150px;
+}
+.form-input-values {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-input-no-error {
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1.5px solid grey;
+  outline: none;
+}
+.form-input-no-error:focus {
+  border: 1.5px solid purple;
+}
+.display-result {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.display-result span {
+  color: purple;
+}
+.button-div {
+  position: relative;
+  margin-top: 50px;
+  border-bottom: 1px solid grey;
+}
+.button-div button {
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: purple;
+  border: none;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+}
+.button-div button img {
+  width: 30px;
+  height: 30px;
+}
+.error-input-color {
+  border: 1px solid red;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  outline: none;
+}
+.text-error-color {
+  color: red;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: bold;
+  /* width: 100px; */
+}
+
+@media (max-width: 476px) {
+  body {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* align-items: center; */
+  }
+  .form-input-no-error {
+    width: 55px;
+  }
+  .button-div {
+    position: relative;
+    margin-top: 10px;
+    border-bottom: 1px solid grey;
+  }
+  .button-div button {
+    right: 120px;
+    width: 40px;
+    height: 40px;
+  }
+  .button-div button img {
+    width: 20px;
+    height: 20px;
+  }
+  .display-result {
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .error-input-color {
+    width: 55px;
+  }
+}
