@@ -11,13 +11,28 @@ export default function AgeInput({ onCalcAge }) {
   const todayMonth = today.getMonth() + 1;
   const todayYear = today.getFullYear();
 
+  function isLeapYear(year, month) {
+    //validity for leapYear
+    if (month === 2) {
+      if (year % 4 === 0) {
+        return 29;
+      }
+      return 28;
+    }
+    //validity for 30 days month
+    if (month === 4 || month === 6 || month === 9 || month === 11) {
+      return 30;
+    }
+    return 31;
+  }
+  const maxDay = isLeapYear(year, month);
+  const validDay = day > maxDay;
+  const validMonth = month > 12;
+  const validYear = year > todayYear;
+
   const exactDay = Math.abs(todayDay - day);
   const exactMonth = Math.abs(todayMonth - month);
   const exactYear = Math.abs(todayYear - year);
-
-  const validDay = day > 31;
-  const validMonth = month > 12;
-  const validYear = year > todayYear;
 
   const newAge = {
     day: exactDay,
@@ -28,6 +43,7 @@ export default function AgeInput({ onCalcAge }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     if (!day || !month || !year) {
       setError("This field is required");
       return;
